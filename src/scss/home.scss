@@ -1,0 +1,192 @@
+//====================================================================================================
+.main {
+	min-height: 40px;
+	background: $BlueColor;
+	padding: 15px 0;
+
+	@media (max-width:$mobile) {
+		padding: 10px 0;
+	}
+
+	&_location {
+		@include adaptiveValue("margin-right", 50, 30);
+
+		@media (max-width:$mobile) {
+			text-align: center;
+			font-size: 12px;
+			margin-right: 0;
+		}
+	}
+
+	&_clock {
+		@media (max-width:$tablet) {
+			display: none;
+		}
+	}
+
+	&__container {}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		font-weight: 700;
+		font-size: 16px;
+		line-height: math.div(19, 16);
+		color: $WhiteColor;
+	}
+}
+
+// head====================================================================================================
+.head {
+	margin: 20px 0;
+
+	&__container {}
+
+	&__body {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		background-color: $WhiteColor;
+		padding: 30px 25px;
+		box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+	}
+
+	&__left {
+		display: flex;
+		flex-direction: column;
+		flex: 0 0 60%;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 auto;
+		}
+	}
+
+	&__left-title {
+		font-weight: 700;
+		font-size: 38px;
+		@include adaptiveValue("font-size", 38, 26);
+		line-height: math.div(44, 38);
+		margin-bottom: 20px;
+
+		span {
+			color: $RedColor;
+		}
+	}
+
+	&__leftp-items {
+		display: flex;
+		flex-direction: column;
+		font-weight: 400;
+		font-size: 15px;
+		line-height: math.div(23, 15);
+		margin-bottom: 10px;
+	}
+
+	&__left-text {
+		font-weight: 700;
+		font-size: 26px;
+		line-height: math.div(30, 26);
+		color: $RedColor;
+		margin-bottom: 20px;
+	}
+
+	&__left-btn {
+		display: flex;
+		align-items: center;
+		flex-wrap: wrap;
+		justify-content: space-between;
+	}
+
+	&__left-button:nth-child(1) {
+		background-color: #00C041;
+	}
+
+	&__left-button:nth-child(2) {
+		background-color: #039BE5;
+	}
+
+	&__left-button:nth-child(3) {
+		background-color: #2B3982;
+	}
+
+	&__right {
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		flex: 0 1 30%;
+		width: 364px;
+
+		@media (max-width:$tablet) {
+			flex: 1 1 auto;
+		}
+
+		& img {
+			width: 100%;
+		}
+
+	}
+}
+
+.button {
+	min-height: 45px;
+	color: $WhiteColor;
+	box-shadow: 0px 4px 15px rgba(43, 57, 130, 0.25);
+	border-radius: 30px 0px;
+	font-weight: 600;
+	font-size: 15px;
+	padding: 14px 20px;
+	text-align: center;
+	display: flex;
+	align-items: center;
+	margin-right: 20px;
+	transition: all 0.3s ease 0s;
+
+	@media (max-width:$tablet) {
+		margin-bottom: 20px;
+		display: block;
+		width: 100%;
+		margin-right: 0;
+	}
+
+	&:hover {
+		opacity: 0.8;
+	}
+}
+
+//========================================================================================================================================================
+.footerpc {
+	background-color: $BlueColor;
+	min-height: 40px;
+	color: $WhiteColor;
+	display: flex;
+	padding: 15px 0;
+	align-items: center;
+
+	@media (max-width:$tablet) {
+		display: none;
+	}
+
+	&__container {}
+}
+
+.footermb {
+	display: none;
+
+	@media (max-width:$tablet) {
+		display: block;
+		background-color: $BlueColor;
+		min-height: 40px;
+		color: $WhiteColor;
+		display: flex;
+		padding: 15px 0;
+		align-items: center;
+	}
+}
+
+.main_clock-footermb {
+	@media (max-width:$tablet) {
+		display: block;
+	}
+}
