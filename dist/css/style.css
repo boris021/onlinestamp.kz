@@ -429,14 +429,19 @@ body {
 }
 
 .head__left-button:nth-child(1) {
-  background-color: #00C041;
+  background-color: #ED1B24;
+  display: none;
 }
 
 .head__left-button:nth-child(2) {
-  background-color: #039BE5;
+  background-color: #00C041;
 }
 
 .head__left-button:nth-child(3) {
+  background-color: #039BE5;
+}
+
+.head__left-button:nth-child(4) {
   background-color: #2B3982;
 }
 
@@ -512,6 +517,10 @@ body {
     -webkit-box-flex: 1;
         -ms-flex: 1 1 auto;
             flex: 1 1 auto;
+  }
+
+  .head__left-button:nth-child(1) {
+    display: block;
   }
 
   .head__right {
